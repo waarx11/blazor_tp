@@ -1,0 +1,27 @@
+﻿@inherits LayoutComponentBase
+@using BlazorSample.UIThemeClasses
+
+<div class="page">
+    <div class="sidebar">
+        <NavMenu />
+    </div>
+
+    <div class="main">
+        <CascadingValue Value="theme">
+            <div class="content px-4">
+                <div class="px-4">
+                    <CultureSelector/>
+                </div>
+            <CascadingValue Value="theme">
+            <div class="content px-4">
+                @Body
+            </div>
+        </CascadingValue>
+            </div>
+        </CascadingValue>
+    </div>
+</div>
+
+@code {
+    private ThemeInfo theme = new() { ButtonClass = "btn-success" };
+}

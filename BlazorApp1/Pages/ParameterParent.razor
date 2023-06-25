@@ -1,0 +1,21 @@
+﻿@page "/parameter-parent"
+
+<h1>Child component (without attribute values)</h1>
+
+<ParameterChild />
+
+<h1>Child component (without attribute values)</h1>
+
+<div>
+    <div>Set By Child</div>
+    <div>Set by child.</div>
+</div>
+
+<h1>Child component (with attribute values)</h1>
+
+<div>
+    <div>Set by Parent</div>
+    <div>Set by parent.</div>
+</div>
+
+<ParameterChild Title="Set by Parent" Body="@(new PanelBody() { Text = "Set by parent.", Style = "italic" })" />

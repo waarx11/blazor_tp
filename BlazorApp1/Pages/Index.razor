@@ -1,0 +1,132 @@
+﻿@page "/"
+@using System.Globalization;
+@using BlazorApp1.Components;
+
+
+<PageTitle>Index</PageTitle>
+
+<h1>Hello, world!</h1>
+
+Welcome to your new app.
+
+<p>
+    <b>CurrentCulture</b>: @CultureInfo.CurrentCulture
+</p>
+
+@*<Card>
+    <CardHeader>
+        <div class="card-header">
+           My Templated Component
+        </div>
+    </CardHeader>
+    <CardBody>
+        <div class="card-body">
+            <h5>Welcome To Template Component</h5>
+        </div>
+    </CardBody>
+    <CardFooter>
+        <div class="card-footer text-muted">
+            Click Here
+        </div>
+    </CardFooter>
+</Card>
+<h2>Template 2</h2>
+<Card>
+    <CardHeader>
+        <div class="card-header">
+            Templated Component
+        </div>
+    </CardHeader>
+    <CardHeader>
+        <div class="card-header">
+            Hi I'm duplicated header
+        </div>
+    </CardHeader>
+</Card>*@
+@*<h2>Template 3</h2>
+<Card Item="CakeItem">
+    <CardHeader>
+        <div class="card-header">
+            Cake Token Number - @context.Id
+        </div>
+    </CardHeader>
+    <CardBody>
+        <div class="card-body">
+            <div>@context.Name</div>
+            <div>$ @context.Cost</div>
+        </div>
+    </CardBody>
+    <CardFooter>
+        <div class="card-footer text-muted">
+            Click Here
+        </div>
+    </CardFooter>
+</Card>
+
+<h2>Template 4</h2>
+<Card Item="CakeItem" Context="cakeContext">
+    <CardHeader>
+        <div class="card-header">
+            Cake Token Number - @cakeContext.Id
+        </div>
+    </CardHeader>
+    <CardBody>
+        <div class="card-body">
+            <div>@cakeContext.Name</div>
+            <div>$ @cakeContext.Cost</div>
+        </div>
+    </CardBody>
+</Card>
+
+<h2>Template 5</h2>
+<Card Item="CakeItem">
+    <CardHeader Context="headContext">
+        <div class="card-header">
+            Cake Token Number - @headContext.Id
+        </div>
+    </CardHeader>
+    <CardBody Context="bodyContext">
+        <div class="card-body">
+            <div>@bodyContext.Name</div>
+            <div>$ @bodyContext.Cost</div>
+        </div>
+    </CardBody>
+</Card>*@
+
+@*<h2>Template 6</h2>
+<ShowItems Items="Cakes" >
+    <ShowTemplate Context="CakeContext">
+        <div class="card text-center">
+            <div class="card-header">
+                Cake Token Id - @CakeContext.Id
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">@CakeContext.Name</h5>
+                <p class="card-text">Price $@CakeContext.Cost</p>
+            </div>
+            <div class="card-footer text-muted">
+                Click Here
+            </div>
+        </div>
+    </ShowTemplate>
+</ShowItems>
+*@
+<TestRenderFragment>
+    <div>Content of my TestRenderFragment</div>
+</TestRenderFragment>
+
+
+<SurveyPrompt Title="How is Blazor working for you?" />
+
+<h3>Component</h3>
+<MyRootComponent Text="RootComponentText">
+    <MyFirstChildComponent>
+        <MySecondChildComponent>
+            <div>MySecondChildComponent - Content</div>
+        </MySecondChildComponent>
+    </MyFirstChildComponent>
+</MyRootComponent>
+@*ERREUR ICI, ne fonctionne pas *@
+@* <div>
+    <Crafting Items="Items" Recipes="Recipes" />
+</div>*@

@@ -1,0 +1,14 @@
+﻿@code {
+    [Parameter]
+    public RenderFragment ChildContent { get; set; }
+
+    [CascadingParameter]
+    public MyRootComponent RootComponent { get; set; }
+}
+
+<div style="border: 1px solid black; padding: 10px;">
+    <strong>MySecondChildComponent - @RootComponent.Text</strong>
+    <div>
+        @ChildContent
+    </div>
+</div>

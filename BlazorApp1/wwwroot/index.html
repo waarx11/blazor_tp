@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <script>
+        window.convertArray = (win1251Array) => {
+            var win1251decoder = new TextDecoder('windows-1251');
+            var bytes = new Uint8Array(win1251Array);
+            var decodedArray = win1251decoder.decode(bytes);
+            console.log(decodedArray);
+            return decodedArray;
+        };
+    </script>
+    <script>
+        window.displayTickerAlert1 = (symbol, price) => {
+            alert(`${symbol}: $${price}!`);
+        };
+    </script>
+    <script>
+        window.displayTickerAlert2 = (symbol, price) => {
+            if (price < 20) {
+                alert(`${symbol}: $${price}!`);
+                return "User alerted in the browser.";
+            } else {
+                return "User NOT alerted.";
+            }
+        };
+    </script>
+    <img alt="coderiddles" src="data:image/jpg;base64,S)OWE902WEIWUOLKASJODIIWJ9878978JKKJKIWEURU4954590EJ09JT9T99TIR32EQ2EKJDKSDFDNXZCNBAC3SASDASD45ASD5ASD5A4SDASD54DS56DB67V6VBN78M90687LKJKSDFJSDF76F7S7D78F9SDF78S6FSDF9SDFSFSDGFSDFSDLFJSDF7SD86FSDFSDFSDFS8F89SDIFOSDFSFJHKJL" />
+</body>
+</html>

@@ -1,0 +1,16 @@
+﻿@code {
+    [Parameter]
+    public RenderFragment ChildContent { get; set; }
+
+    [Parameter]
+    public string Text { get; set; }
+}
+
+<div style="border: 1px solid black; padding: 10px;">
+    <strong>MyRootComponent - @Text</strong>
+    <div>
+        <CascadingValue Value="@this">
+            @ChildContent
+        </CascadingValue>
+    </div>
+</div>
